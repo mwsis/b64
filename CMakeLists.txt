@@ -74,14 +74,14 @@ set(CMAKE_CXX_EXTENSIONS ON)
 
 if(BUILD_TESTING)
 
-	set(xTests_REQUIRED_VERSION_ 0.21.2)
+	set(xTests_REQUIRED_VERSION_ 0.22)
 
 	find_package(xTests ${xTests_REQUIRED_VERSION_} REQUIRED)
 
 	message("-- CMake package xTests found (version ${xTests_VERSION}; ${xTests_REQUIRED_VERSION_} requested)")
 
 
-	set(STLSoft_REQUIRED_VERSION_ 0.10.8)
+	set(STLSoft_REQUIRED_VERSION_ 0.11)
 
 	find_package(STLSoft ${STLSoft_REQUIRED_VERSION_} REQUIRED)
 
