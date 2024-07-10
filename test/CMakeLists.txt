@@ -1,23 +1,22 @@
 
 include_directories(${CMAKE_SOURCE_DIR}/include)
 
-if (APPLE)
+if(APPLE)
 
-    message("adding '/usr/local/include' to include-directories for 'test'")
+	message("adding '/usr/local/include' to include-directories for 'test'")
 
-    include_directories("/usr/local/include")
-endif()
-
+	include_directories("/usr/local/include")
+endif(APPLE)
 
 if(UNIX)
 
-    add_definitions(-DUNIX)
-    add_definitions(-Dunix)
+	add_definitions(-DUNIX)
+	add_definitions(-Dunix)
 endif()
 
 if(WIN32)
 
-    message(FATAL_ERROR "Use of CMake on Windows not currently supported")
+	message(FATAL_ERROR "Use of CMake on Windows not currently supported")
 endif()
 
 
