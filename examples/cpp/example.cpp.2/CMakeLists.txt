@@ -4,7 +4,9 @@ add_executable(example.cpp.2
 )
 
 target_link_libraries(example.cpp.2
-	b64
+	PRIVATE
+		b64
+		$<$<STREQUAL:${STLSOFT_INCLUDE_DIR},>:STLSoft::STLSoft>
 )
 
 target_compile_options(example.cpp.2 PRIVATE

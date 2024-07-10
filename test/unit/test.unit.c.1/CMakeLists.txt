@@ -6,8 +6,9 @@ add_executable(test.unit.c.1
 link_directories(${CMAKE_SOURCE_DIR}/projects/core)
 
 target_link_libraries(test.unit.c.1
-	b64
-	xTests::xTests.core
+	PRIVATE
+		b64
+		xTests::xTests.core
 )
 
 target_compile_options(test.unit.c.1 PRIVATE

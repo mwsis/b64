@@ -16,7 +16,20 @@ endif()
 
 if(WIN32)
 
-	message(FATAL_ERROR "Use of CMake on Windows not currently supported")
+	if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+
+		message (STATUS "Compiling for 64-bit Windows")
+
+		add_definitions(-DWIN64)
+	else()
+
+		message (STATUS "Compiling for 32-bit Windows")
+
+		add_definitions(-DWIN32)
+	endif()
+
+	# suppress implicit-link file
+	add_definitions(-DB64_INCL_B64_H_IMPLICIT_LINK)
 endif()
 
 
